@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import sys, os
+app_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
+if app_path not in sys.path:
+	sys.path.append(app_path)
+
+from lib import run
+
+
+USAGE='''USAGE: %s <action> 
+\t<action> list:
+\t\tserver
+\t\tconsole
+\t\tnew app_name
+'''
+
+if __name__ == "__main__":
+	parameters = sys.argv
+	
+	if len(parameters) < 2:
+		print(USAGE % parameters[0])
+		exit(1)
+		
+	action = parameters[1]
+	if action == 'new':
+		pass
+	elif action == 'server':
+		run()
+	elif action == 'console':
+		pass

@@ -1,0 +1,16 @@
+{
+  "name": "fire",
+  "version": "1.0.0",
+  "description": "Flask of Fire",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:limbov8/fire.git"
+  },
+  "author": "Libo Liu",
+  "license": "MIT"
+}

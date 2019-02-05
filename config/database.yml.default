@@ -1,0 +1,19 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  redis: redis://127.0.0.1:6379/0
+  mongodb: mongodb://127.0.0.1:27017/collection
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: postgresql+psycopg2://user:password@127.0.0.1/db_name

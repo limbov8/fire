@@ -1,15 +1,18 @@
-from environments import DevelopmentConfig, ProductionConfig
+from lib.utils.conversions import dict2obj
 import yaml
 
 
 database_settings = {}
-with open('database.yml', 'r') as f:
+with open('config/database.yml', 'r') as f:
 	database_settings = yaml.load(f)
 
+app_config = {}
+with open('config/config.yml', 'r') as f:
+	app_config = yaml.load(f)
 
 app_config = {
-	'development': DevelopmentConfig
-	'production': ProductionConfig
+	'development': dict2obj(app_config['development']),
+	'production': dict2obj(app_config['production'])
 }
 
 

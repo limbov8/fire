@@ -6,28 +6,62 @@ if app_path not in sys.path:
     sys.path.append(app_path)
 
 from lib.run import run as run_server
-from lib.command import list_routes, console
+from lib.command import list_routes
+from lib.command import console as start_console
+from lib.command import new_app
+import click
 
-USAGE='''USAGE: %s <action> 
-\t<action> list:
-\t\tserver
-\t\tconsole
-\t\tnew app_name
-'''
+# USAGE='''USAGE: %s <action> 
+# \t<action> list:
+# \t\tserver
+# \t\tconsole
+# \t\tnew app_name
+# '''
 
-if __name__ == "__main__":
-    parameters = sys.argv
-    
-    if len(parameters) < 2:
-        print(USAGE % parameters[0])
-        exit(1)
-        
-    action = parameters[1]
-    if action == 'new':
-        pass
-    elif action == 'server':
-        run_server()
-    elif action == 'console':
-        console()
-    elif action == 'routes':
-        list_routes()
+import click
+
+@click.group()
+def cli1():
+    pass
+# host='0.0.0.0', port=65522, debug=True
+@cli1.command()
+@click.option('--host', default='0.0.0.0', type=str, show_default=True)
+@click.option('--port', default=65522, type=click.IntRange(1025, 65534), show_default=True)
+@click.option('--debug/--no-debug', default=True, show_default=True, help='Default is debugging status')
+def server(host, port, debug):
+    """Run a development fire server. Don't use this one as webserver"""
+    run_server(host, port, debug)
+
+@click.group()
+def cli2():
+    pass
+
+@cli2.command()
+def console():
+    """Open a test console with flask context"""
+    start_console()
+
+@click.group()
+def cli3():
+    pass
+
+@cli3.command()
+def routes():
+    '''List all routes'''
+    list_routes()
+
+@click.group()
+def cli4():
+    pass
+
+@cli4.command('new')
+@click.argument('type', type=click.Choice(['app', 'scaffold'], case_sensitive=False))
+@click.argument('app_name')
+def new_func(type, app_name):
+    """Create a new app/scaffold"""
+    new_app(type, app_name)
+
+cli = click.CommandCollection(sources=[cli1, cli2, cli3, cli4])
+
+if __name__ == '__main__':
+    cli()

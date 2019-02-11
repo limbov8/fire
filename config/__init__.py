@@ -10,6 +10,8 @@ app_config = {}
 with open('config/config.yml', 'r') as f:
     app_config = yaml.load(f)
 
+app_config.update(database_settings)
+
 routes = {}
 with open('config/routes.yml', 'r') as f:
     routes = yaml.load(f)

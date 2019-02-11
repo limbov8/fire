@@ -24,4 +24,3 @@
       controller: BlogDelete
       methods: delete
       endpoint: blog_delete
-

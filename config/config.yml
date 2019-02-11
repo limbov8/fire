@@ -1,4 +1,5 @@
 default: &default
+  APP_FOLDER: app/
   APP_NAME: 'Fire'
   SECRET_KEY: 'SECRET_KEY'
   TEMPLATES_AUTO_RELOAD: true
@@ -9,7 +10,7 @@ default: &default
   SQLALCHEMY_DATABASE_URI: sqlite:///testing.db
   SQLALCHEMY_TRACK_MODIFICATIONS: false
   KONCH_SHELL: ipy
-  
+
 development:
   <<: *default
 

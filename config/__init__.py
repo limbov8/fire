@@ -16,7 +16,8 @@ with open('config/routes.yml', 'r') as f:
 
 app_config = {
     'development': dict2obj(app_config['development']),
-    'production': dict2obj(app_config['production'])
+    'production': dict2obj(app_config['production']),
+    'testing': dict2obj(app_config['testing'])
 }
 
 all = [

@@ -6,7 +6,7 @@ from config import app_config, routes
 from .route import Route
 import app as user_app
 
-def create_app(config_name):
+def create_app(config_name='development'):
     app_name = app_config[config_name].APP_NAME or __name__
     app = Flask(app_name)
     app.config.from_object(app_config[config_name])

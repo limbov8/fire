@@ -5,7 +5,8 @@ app_path = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 if app_path not in sys.path:
     sys.path.append(app_path)
 
-from lib import run as run_server
+from lib.run import run as run_server
+from lib.command import list_routes, console
 
 USAGE='''USAGE: %s <action> 
 \t<action> list:
@@ -25,6 +26,8 @@ if __name__ == "__main__":
     if action == 'new':
         pass
     elif action == 'server':
-        run_server
+        run_server()
     elif action == 'console':
-        pass
+        console()
+    elif action == 'routes':
+        list_routes()

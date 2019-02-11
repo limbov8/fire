@@ -8,10 +8,16 @@ default: &default
   ASSETS_DEBUG: false
   SQLALCHEMY_DATABASE_URI: sqlite:///testing.db
   SQLALCHEMY_TRACK_MODIFICATIONS: false
-
+  KONCH_SHELL: ipy
+  
 development:
   <<: *default
 
 
 production:
   <<: *default
+
+testing:
+  <<: *default
+  testing: true
+  SERVER_NAME: localhost

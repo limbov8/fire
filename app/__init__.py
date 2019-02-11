@@ -1,13 +1,18 @@
 from flask import render_template
+
+from lib.utils.update import update_context
+
 from .models import db
 from .assets import create_assets
-from lib.utils.update import update_context
+from .jobs import rq_instance
+
 def init_app(app, csrf, assets):
-    app.jinja_env.add_extension('jinja2.ext.do')
-    create_assets(assets)
     with app.app_context():
+        app.jinja_env.add_extension('jinja2.ext.do')
+        create_assets(assets)
         db.init_app(app)
-    update_context(app, {"db": db, "assets": assets})
+        rq_instance.init_app(app)
+        update_context(app, {"db": db, "assets": assets, "rq_instance": rq_instance})
 
 def internal_render():
     if internal_render.page:

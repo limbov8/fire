@@ -3,7 +3,7 @@ from rq.job import Job
 from rq.exceptions import NoSuchJobError
 
 def job_fetch(self, id):
-	"""Job fetch patch to flask_rq2"""
+    """Job fetch patch to flask_rq2"""
     job = False, None
     try:
         job = True, Job.fetch(id, connection=rq_instance.connection)
@@ -18,7 +18,7 @@ RQ.job_fetch = job_fetch
 rq_instance = RQ()
 
 def queue_job_with_connection(job, connection, *args, _queue_name=None, **kwargs):
-	"""Queue a job inside another job with connection provided"""
+    """Queue a job inside another job with connection provided"""
     if not connection:
         return job
 

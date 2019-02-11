@@ -2,10 +2,12 @@ appnope==0.1.0
 backcall==0.1.0
 Click==7.0
 colorama==0.4.1
+croniter==0.3.27
 cssmin==0.2.0
 decorator==4.3.2
 Flask==1.0.2
 Flask-Assets==0.12
+Flask-RQ2==18.3
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 ipython==7.2.0
@@ -22,8 +24,12 @@ pickleshare==0.7.5
 prompt-toolkit==2.0.8
 ptyprocess==0.6.0
 Pygments==2.3.1
+python-dateutil==2.8.0
 python-dotenv==0.10.1
 PyYAML==3.13
+redis==3.1.0
+rq==0.13.0
+rq-scheduler==0.9
 six==1.12.0
 SQLAlchemy==1.2.17
 traitlets==4.3.2

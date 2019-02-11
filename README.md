@@ -3,13 +3,23 @@ Flask on Fire, a MVC template for Flask
 
 # Setup
 
+## Run
 - rename `config/database.yml.default` to `config/database.yml`
-- use `config/routes.yml` to register routes
 - use `bin/fire server` to setup a development server
+
+## Settings
+
+- use `config/routes.yml` to register routes
 - change `config/config.yml` accordingly
 - write static files in `public/`
 - change static file bundle settings in `app/assets.py`
+- use `app/jobs.py` to setup aync jobs using rq (redis queue)
 
+### RQ Workers
+
+```shell
+.venv/bin/rq worker --url redis://127.0.0.1:6379/0 --name %(program_name)s-%(process_num)s  high normal low
+```
 
 # Commands
 

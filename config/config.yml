@@ -1,7 +1,7 @@
 default: &default
   APP_FOLDER: app/
-  APP_NAME: 'Fire'
-  SECRET_KEY: 'SECRET_KEY'
+  APP_NAME: fire
+  SECRET_KEY: SECRET_KEY
   TEMPLATES_AUTO_RELOAD: true
   DEBUG: true
   ENV: ''
@@ -13,7 +13,6 @@ default: &default
 
 development:
   <<: *default
-
 
 production:
   <<: *default

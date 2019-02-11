@@ -33,6 +33,7 @@ rq-scheduler==0.9
 six==1.12.0
 SQLAlchemy==1.2.17
 traitlets==4.3.2
+uWSGI==2.0.18
 wcwidth==0.1.7
 webassets==0.12.1
 Werkzeug==0.14.1

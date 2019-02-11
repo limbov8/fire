@@ -14,11 +14,13 @@ Flask on Fire, a MVC template for Flask
 - write static files in `public/`
 - change static file bundle settings in `app/assets.py`
 - use `app/jobs.py` to setup aync jobs using rq (redis queue)
+- change path in `fire.supervisor.conf`
+- use `supervisord` and `uwsgi` to setup production server
 
 ### RQ Workers
 
 ```shell
-.venv/bin/rq worker --url redis://127.0.0.1:6379/0 --name %(program_name)s-%(process_num)s  high normal low
+(.venv) $ .venv/bin/rq worker --url redis://127.0.0.1:6379/0 --name rq_worker_name  high normal low
 ```
 
 # Commands

@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+bundle/*.css
+bundle/*.js
+*.db
+
 database.yml
 
 # Distribution / packaging
@@ -56,6 +60,8 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+
+.DS_Store
 
 # Flask stuff:
 instance/

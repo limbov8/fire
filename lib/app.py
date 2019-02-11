@@ -16,6 +16,8 @@ def create_app(config_name):
 
     assets = Environment(app)
 
+    app.static_folder = 'public'
+    
     blueprint = Blueprint('public', 'public', static_url_path='/public', static_folder='public')
     app.register_blueprint(blueprint)
     blueprint = Blueprint('app', 'app', template_folder='templates')

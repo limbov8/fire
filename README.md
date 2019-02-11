@@ -1,2 +1,2 @@
 # fire
-Flask of Fire
+Flask on Fire, a MVC framework using Flask

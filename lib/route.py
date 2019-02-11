@@ -85,6 +85,3 @@ class Route():
                 if settings['app'] not in app.blueprints:
                     bp = Blueprint(settings['app'], 'app.' + settings['app'], template_folder='templates')
                     app.register_blueprint(bp)
-
-            print(url)
-            print(settings)

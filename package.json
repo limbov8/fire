@@ -1,16 +1,20 @@
 {
   "name": "fire",
   "version": "1.0.0",
-  "description": "Flask of Fire",
+  "description": "Flask on Fire",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:limbov8/fire.git"
+    "url": "git+ssh://git@github.com/limbov8/fire.git"
   },
   "author": "Libo Liu",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/limbov8/fire/issues"
+  },
+  "homepage": "https://github.com/limbov8/fire",
 }

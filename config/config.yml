@@ -6,6 +6,8 @@ default: &default
   ENV: ''
   SEND_FILE_MAX_AGE_DEFAULT: 0
   ASSETS_DEBUG: false
+  SQLALCHEMY_DATABASE_URI: sqlite:///testing.db
+  SQLALCHEMY_TRACK_MODIFICATIONS: false
 
 development:
   <<: *default

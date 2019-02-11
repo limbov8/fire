@@ -1,4 +1,5 @@
 default: &default
+  APP_NAME: 'Fire'
   SECRET_KEY: 'SECRET_KEY'
   TEMPLATES_AUTO_RELOAD: true
   DEBUG: true

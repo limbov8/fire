@@ -1,0 +1,27 @@
+/:
+  scope: false
+  app: internal_render
+  file: index.html
+  endpoint: index
+
+/blog:
+  scope: true
+  app: blog
+  suffix:
+    /:
+      controller: BlogIndex
+      methods: get
+      endpoint: blog_index
+    /view/<id>:
+      controller: BlogView
+      methods: get
+      endpoint: blog_view
+    /edit/<id>:
+      controller: BlogEdit
+      methods: get, post
+      endpoint: blog_edit
+    /delete/<id>:
+      controller: BlogDelete
+      methods: delete
+      endpoint: blog_delete
+

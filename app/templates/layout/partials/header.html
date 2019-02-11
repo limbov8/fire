@@ -1,0 +1,9 @@
+{% block header %}
+
+<nav class="navbar navbar-light bg-light">
+	<div class="container">
+  		<a class="navbar-brand mb-0 h1" href="{{ url_for('index') }}">Minty {% block title %}{% endblock %}</a>
+  	</div>
+</nav>
+
+{% endblock %}

@@ -1,9 +1,13 @@
-# fire
-Flask on Fire, a MVC template for Flask
+# Flask on Fire
+A MVC template for Flask
 
 # Setup
 
 ## Run
+- only support `python3`
+- setup virtualenv `python3 -m virtualenv .venv`
+- activate vevn `source .venv/bin/activate`
+- install requirements `pip install -r requirements.txt`
 - rename `config/database.yml.default` to `config/database.yml`
 - use `bin/fire server` to setup a development server
 

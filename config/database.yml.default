@@ -9,7 +9,7 @@ development:
   <<: *default
   SQLALCHEMY_DATABASE_URI: db/development.sqlite3
 
-test:
+testing:
   <<: *default
   SQLALCHEMY_DATABASE_URI: db/test.sqlite3
 

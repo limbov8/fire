@@ -69,6 +69,13 @@ Writing scaffold routes into config/routes.yml ...
 
 # Contributor
 
-Thanks 
+First used by [@sooooner11](https://github.com/sooooner11) in DARPA project [minty](https://github.com/spatial-computing/minty)
+
+## Thanks for the awesome projects
+
 - [CharlyJazz/Flask-MVC-Template](https://github.com/CharlyJazz/Flask-MVC-Template)
 - [sloria/flask-konch](https://github.com/sloria/flask-konch)
+
+## License
+
+Flask on Fire is released under the [MIT License](https://opensource.org/licenses/MIT).

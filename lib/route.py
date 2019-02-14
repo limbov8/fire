@@ -82,7 +82,7 @@ class Route():
                         continue
                     
                     self._validate(sub_settings, _url)
-                    methods = self._get_method(settings)
+                    methods = self._get_method(sub_settings)
 
                     _class = getattr(module, sub_settings['controller'])
                     

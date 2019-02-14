@@ -69,12 +69,13 @@ Writing scaffold routes into config/routes.yml ...
 
 # Contributor
 
-First used by [@sooooner11](https://github.com/sooooner11) in DARPA project [minty](https://github.com/spatial-computing/minty)
+[![Open Source Helpers](https://www.codetriage.com/limbov8/fire/badges/users.svg)](https://www.codetriage.com/limbov8/fire)
 
-## Thanks for the awesome projects
+## Thanks for awesome projects
 
 - [CharlyJazz/Flask-MVC-Template](https://github.com/CharlyJazz/Flask-MVC-Template)
 - [sloria/flask-konch](https://github.com/sloria/flask-konch)
+- Fire is first used by [@sooooner11](https://github.com/sooooner11) in DARPA project [minty](https://github.com/spatial-computing/minty)
 
 ## License
 

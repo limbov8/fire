@@ -1,19 +1,26 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: 5
   timeout: 5000
-  redis: redis://127.0.0.1:6379/0
-  mongodb: mongodb://127.0.0.1:27017/collection
+  SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://user:password@127.0.0.1/db_name
+  DATABASE_URL: postgresql+psycopg2://user:password@127.0.0.1/db_name
+  SQLALCHEMY_TRACK_MODIFICATIONS: True
+  MONGODB_DATABASE_URI: mongodb://user:password@127.0.0.1:27017/db_name
+  MONGODB_SETTINGS:
+    db: user
+    host: mongodb://127.0.0.1:27017/db_name
+    username: user
+    password: password
+    connect: False
+
+  RQ_REDIS_URL : redis://127.0.0.1:6379/1
+  REDIS_URL: redis://127.0.0.1:6379/1
 
 development:
   <<: *default
-  SQLALCHEMY_DATABASE_URI: db/development.sqlite3
+  
+production:
+  <<: *default
 
 testing:
   <<: *default
-  SQLALCHEMY_DATABASE_URI: db/test.sqlite3
-
-production:
-  <<: *default
-  adapter: postgresql
-  SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://user:password@127.0.0.1/db_name

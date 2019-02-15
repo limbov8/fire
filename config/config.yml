@@ -10,6 +10,7 @@ default: &default
   SQLALCHEMY_DATABASE_URI: sqlite:///testing.db
   SQLALCHEMY_TRACK_MODIFICATIONS: false
   KONCH_SHELL: ipy
+  KONCH_BANNER: Flask on Fire Console
 
 development:
   <<: *default

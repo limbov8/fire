@@ -21,4 +21,4 @@ production:
 testing:
   <<: *default
   testing: true
-  SERVER_NAME: localhost
+  SERVER_NAME: 127.0.0.1:65522
